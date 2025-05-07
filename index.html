@@ -1,0 +1,110 @@
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nutriveci</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: url('https://images.unsplash.com/photo-1506806732259-39c2d0268443') no-repeat center center fixed;
+      background-size: cover;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: rgba(76, 175, 80, 0.9);
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+    main {
+      padding: 2rem;
+      background-color: rgba(255, 255, 255, 0.9);
+      margin: 2rem;
+      border-radius: 10px;
+    }
+    section {
+      margin-bottom: 2rem;
+    }
+    a.telegram-link {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.75rem 1.5rem;
+      background-color: #0088cc;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+    a.telegram-link:hover {
+      background-color: #006c9a;
+    }
+    #clock {
+      font-weight: bold;
+      margin-top: 10px;
+      font-size: 1.2rem;
+    }
+    .icon {
+      margin-right: 8px;
+      color: #4CAF50;
+    }
+    .nutrition-img {
+      max-width: 100%;
+      border-radius: 10px;
+      margin-top: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1><i class="fas fa-apple-alt icon"></i>Nutriveci</h1>
+    <p>Tu fuente confiable de información nutricional</p>
+  </header>
+
+  <main>
+    <section>
+      <h2><i class="fas fa-seedling icon"></i>¿Qué es una buena nutrición?</h2>
+      <p>Una buena nutrición es fundamental para una vida saludable. Implica consumir una dieta equilibrada que incluya una variedad de alimentos ricos en nutrientes: frutas, verduras, proteínas magras, granos enteros y grasas saludables.</p>
+      
+      <section>
+      <h2><i class="fas fa-lightbulb icon"></i>Consejos clave para una alimentación saludable</h2>
+      <ul>
+        <li>Come más frutas y verduras.</li>
+        <li>Reduce el consumo de azúcar y sal.</li>
+        <li>Elige grasas saludables como las que se encuentran en el aguacate y el aceite de oliva.</li>
+        <li>Mantente hidratado bebiendo suficiente agua cada día.</li>
+      </ul>
+      <p>Consulta más consejos en el sitio oficial del Ministerio de Salud de Colombia: <a href="https://www.minsalud.gov.co/salud/Paginas/alimentacion-saludable.aspx" target="_blank">Alimentación Saludable - Minsalud</a></p>
+    </section>
+
+    <section>
+      <h2><i class="fas fa-history icon"></i>Historia</h2>
+      <p>Nutriveci nació con la misión de fomentar hábitos saludables y generar un impacto social positivo en personas que desean mejorar su calidad de vida. Nuestro chatbot fue diseñado como una herramienta accesible y confiable para quienes están dando sus primeros pasos hacia una mejor nutrición.</p>
+    </section>
+
+    <section>
+      <h2><i class="fas fa-concierge-bell icon"></i>Servicios</h2>
+      <p>Ofrecemos orientación nutricional personalizada y acceso a nuestro chatbot interactivo en Telegram para resolver tus dudas.</p>
+      <a href="https://t.me/tu_chatbot" target="_blank" class="telegram-link"><i class="fab fa-telegram icon"></i>Ir al chatbot en Telegram</a>
+      <div id="clock">Hora actual: --:--:--</div>
+    </section>
+
+    <section>
+      <h2><i class="fas fa-envelope icon"></i>Contacto</h2>
+      <p>Puedes contactarnos a través del correo <a href="mailto:contacto@nutriveci.com">contacto@nutriveci.com</a> o seguirnos en nuestras redes sociales para más contenido.</p>
+    </section>
+  </main>
+
+  <script>
+    function updateClock() {
+      const clock = document.getElementById('clock');
+      const now = new Date();
+      const timeString = now.toLocaleTimeString();
+      clock.textContent = 'Hora actual: ' + timeString;
+    }
+    setInterval(updateClock, 1000);
+    updateClock();
+  </script>
+</body>
+</html>
